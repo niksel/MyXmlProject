@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://imcsgroup.xsd/Customer/"
+	xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://imcsgroup.xsd/Customer/"
+	 xmlns:pref1="http://imcsgroup.xsd/Address/">
+
+	<import schemaLocation="Address.xsd" namespace="http://imcsgroup.xsd/Address/"></import>
+	<complexType name="Customer">
+		<sequence>
+			<element name="customerId" type="int"></element>
+			<element name="name" type="string"></element>
+			<element name="dateOfBirth" type="date"></element>
+			<element name="annualSalary" type="float"></element>
+			<element name="addresses" type="pref1:Address" minOccurs="1" maxOccurs="unbounded"></element>
+			<element name="paymentMethods" type="tns:PaymentMethod" minOccurs="1" maxOccurs="unbounded"></element>
+		</sequence>
+	</complexType>
+
+	<complexType name="PaymentMethod">
+		<sequence>
+			<element name="cardNo" type="string"></element>
+			<element name="cardName" type="string"></element>
+			<element name="dateFrom" type="date"></element>
+
+
+			<element name="cardType">
+				<simpleType>
+					<restriction base="string">
+						<enumeration value="CREDITCARD"></enumeration>
+						<enumeration value="DEBITCARD"></enumeration>
+					</restriction>
+				</simpleType>
+			</element>
+		</sequence>
+	</complexType>
+
+	<element name="Customer" type="tns:Customer"></element>
+</schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:customer xmlns:ns2="http://imcsgroup.xsd/Customer/">
+    <customerId>100</customerId>
+    <name>Nikhil</name>
+    <dateOfBirth>2017-11-07-06:00</dateOfBirth>
+    <annualSalary>60000.0</annualSalary>
+    <addresses>
+        <Street>Heath street</Street>
+        <City>Buffalo</City>
+        <State>NY</State>
+        <Country>US</Country>
+        <Zipcode>14214</Zipcode>
+    </addresses>
+    <paymentMethods>
+        <cardNo>200</cardNo>
+        <cardName>Visa</cardName>
+        <dateFrom>2017-11-07-06:00</dateFrom>
+        <cardType>VISA</cardType>
+    </paymentMethods>
+</ns2:customer>

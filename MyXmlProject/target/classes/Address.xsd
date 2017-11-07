@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://imcsgroup.xsd/Address/" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://imcsgroup.xsd/Address/">
+    <complexType name="Address">
+    	<sequence>
+    		<element name="Street" type="string"></element>
+    		<element name="City" type="string"></element>
+    		<element name="State" type="string"></element>
+    		<element name="Country" type="string"></element>
+    		<element name="Zipcode" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Address" type="tns:Address"></element>
+</schema>
